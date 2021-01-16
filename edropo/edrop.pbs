@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -N edropo
+# PBS -l qos=debug
+#PBS -l mem=5000mb
+#PBS -l walltime=72:00:00
+#PBS -r n
+
+cd $PBS_O_WORKDIR
+##source /global/home/qiming82/edropo/e_vdrop
+echo "Current working directory is 'pad'"
+
+echo "Starting run at: 'date'"
+./e_vdrop
+echo "Program finished with exit code $? at 'date'"
